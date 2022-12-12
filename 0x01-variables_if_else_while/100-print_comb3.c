@@ -1,32 +1,61 @@
 #include <stdio.h>
-#include <stdlib.h>
+
+
+
 /**
- * main - Entry point
  *
- * Return: Always 0 (sucess)
- */
+ *  * main - Prints the numbers from 00 to 99, numbers separated by
+ *
+ *   *        a comma followed by a space, in ascending order.
+ *
+ *    *
+ *
+ *     * Return: Always 0.
+ *
+ *      */
 
 int main(void)
-{ 
-	int ones = '0';
-	int tens = '0';
 
-	for (tens  '0'; tens <= '9'; tens++)/*prints tens digit*/
-	{
-               for( ones = '0'; ones <= '9': ones++)/*prints ones digit*/
-	       {
-	              if(!((ones == tens) || (tens > ones)))/*eliminates repition*/
-		      {
-	                  putchar(tens);
-                          putchar(ones);
-                          if(!(ones == '9'  && tens == '8'))/*eliminates comma and space*/
-			  {
-	                      putchar(',');
-                              putchar(' ');
-			  }
-		      }
-	       }
-	}
-        putchar('\n');
-        return(0);
-}	
+{
+
+		int digit1, digit2;
+
+
+
+			for (digit1 = 0; digit1 < 10; digit1++)
+
+					{
+
+								for (digit2 = 0; digit2 < 10; digit2++)
+
+											{
+
+															putchar((digit1 % 10) + '0');
+
+																		putchar((digit2 % 10) + '0');
+
+
+
+																					if (digit1 == 9 && digit2 == 9)
+
+																										continue;
+
+																								
+
+																								putchar(',');
+
+																											putchar(' ');
+
+																													}
+
+									}
+
+
+
+				putchar('\n');
+
+
+
+					return (0);
+
+}
